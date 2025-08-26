@@ -1,0 +1,138 @@
+body {
+  background-color: #000000;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+#sky {
+  height: 100%;
+}
+
+.star {
+  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.4);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.header1{
+    position: relative;
+    top: 20px;
+    text-align: center;
+    font-size: 120px;
+    background: linear-gradient(152deg,rgba(255, 0, 225, 1) 0%, rgba(28, 195, 232, 1) 100%);
+    background-clip: text;
+    color: transparent;
+    background-size: 40%;
+    transition: transform 0.5s ease;
+}
+
+.header1:hover{
+  transform: scaleX(1.1);
+}
+
+.header2{
+    position: relative
+    top 0px;
+    text-align: center;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.container1{
+  display: flex;
+  justify-content: center; 
+  align-items: center;                
+}
+
+.textinput{
+    position: relative;
+    top: 40px;
+    background-color: #202020;
+    color: #ffffff;
+    resize: none;
+    overflow: auto;
+    border: 4px solid #fb07f7;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 400px;
+    width: 80%;
+    transition: border 0.5s ease, border-radius 0.5s ease;
+}
+
+.textinput:hover{
+    border: 8px solid #fb07f7;
+    border-radius: 15px;
+}
+
+.submitbtn{
+  position: fixed;
+  top: 90%;
+  left: 80%;
+  border: 3px solid #fb07f7;
+  border-radius: 7px;
+  font-size: 50px;
+  background: #ffffff00;
+  color: #ffffff;
+  font-family: "Ubuntu Mono", monospace;
+  transition: background 0.5s ease, border 0.2s ease, border-radius 0.2s ease;
+}
+
+.submitbtn:hover{
+  background: #420048;
+}
+
+.submitbtn:active{
+  border: 6px solid #fb07f7;
+  border-radius: 10px;
+}
+
+.container2{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.textoutput{
+  position: relative;
+  top: 80px;
+  border: 4px solid #fb07f7;
+  border-radius: 15px;
+  color: #ffffff;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 20px;
+  background-color: #202020;
+  transition: border 0.5s ease, border-radius 0.5s ease;
+}
+
+.textoutput:hover{
+    border: 8px solid #fb07f7;
+    border-radius: 15px;
+}
+
+@media (max-width: 800px){
+.header1{
+    position: relative;
+    top: 30px;
+    text-align: center;
+    font-size: 120px;
+    background: linear-gradient(152deg,rgba(255, 0, 225, 1) 0%, rgba(28, 195, 232, 1) 100%);
+    background-clip: text;
+    color: transparent;
+    background-size: 100%;
+}
+
+.submitbtn{
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  border: 3px solid #fb07f7;
+  border-radius: 7px;
+  font-size: 40px;
+  background: transparent;
+  color: #ffffff;
+  font-family: "Ubuntu Mono", monospace;
+}
+}
