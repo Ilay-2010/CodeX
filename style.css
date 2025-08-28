@@ -1,6 +1,7 @@
 body {
   background-color: #000000;
   font-family: "Ubuntu Mono", monospace;
+  overflow-x: hidden;
 }
 
 #sky {
