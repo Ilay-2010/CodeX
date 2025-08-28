@@ -44,19 +44,20 @@
     }
     createStars(200);
 
-  async function ask(){
-    const input = document.getElementById('input');
-    const o = document.getElementById('output');
-    o.textContent = 'Thinking...';
-    try {
-      const userText = input.value + " keep the answer short. your name is CodeX, but you dont need to mention thet on every message. but if someone asks, you are codeX and developed by Ilay Schönknecht. write your answer short but informative and helpfull. please give me optimization ideas for my code. if i have something wrong in my code, please correct it and give me the working code, and say, what i did wrong. if the question isnt programming related, write as output: Sorry, im only optimized for programming questions.";
-      
-      const r = await apifree.chat(userText);
-      o.textContent = r;
-    } catch(e){
-      o.textContent = 'Error: ' + e;
-    }
-  }
+    async function ask(){
+     const input = document.getElementById('input');
+     const o = document.getElementById('output');
+     o.textContent = 'Thinking...';
+     try {
+       const userPrompt = input.value.trim();
+       const systemPrompt = "Keep the answer short. Your name is CodeX, but you dont need to mention that in every message. If someone asks, you are CodeX and developed by Ilay Schönknecht. Write your answer short but informative and helpful. If I have something wrong in my code, please correct it and give me the working code, and say what I did wrong. If the question isn’t programming related, write as output: Sorry, im only optimized for programming questions.";
+
+       const r = await apifree.chat(userPrompt + " " + systemPrompt);
+       o.textContent = r;
+     } catch(e){
+       o.textContent = 'Error: ' + e;
+     }
+   }
+
 </script>
 </html>
-
