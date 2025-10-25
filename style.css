@@ -26,19 +26,21 @@ body {
     background-clip: text;
     color: transparent;
     background-size: 40%;
-    transition: transform 0.5s ease;
 }
 
-.header1:hover{
-  transform: scaleX(1.1);
-}
 
 .header2{
-    position: relative
-    top 0px;
+    position: relative;
+    top: 0px;
     text-align: center;
     font-size: 40px;
     color: #ffffff;
+    text-shadow: 0 0 50px #ffffff;
+    transition: text-shadow 0.5s ease;
+}
+
+.header2:hover{
+  text-shadow: 0 0 10px #fb07f7;
 }
 
 .container1{
@@ -54,24 +56,25 @@ body {
     color: #ffffff;
     resize: none;
     overflow: auto;
-    border: 4px solid #fb07f7;
+    border: 4px solid #ffffff;
     border-radius: 10px;
     font-size: 20px;
+    box-shadow: 0 0 40px #ffffff;
     height: 400px;
     width: 80%;
-    transition: border 0.5s ease, border-radius 0.5s ease;
+    transition: border 0.5s ease, box-shadow 0.5s ease;
 }
 
 .textinput:hover{
-    border: 8px solid #fb07f7;
-    border-radius: 15px;
+    border: 4px solid #fb07f7;
+    box-shadow: 0 0 10px #fb07f7;
 }
 
 .submitbtn{
   position: fixed;
   top: 90%;
   left: 80%;
-  border: 3px solid #fb07f7;
+  border: 3px solid #0d0080;
   border-radius: 7px;
   font-size: 50px;
   background: #ffffff00;
@@ -81,7 +84,7 @@ body {
 }
 
 .submitbtn:hover{
-  background: #420048;
+  background: #1500d1;
 }
 
 .submitbtn:active{
@@ -98,7 +101,7 @@ body {
 .textoutput{
   position: relative;
   top: 80px;
-  border: 4px solid #fb07f7;
+  border: 4px solid #0d0080;
   border-radius: 15px;
   color: #ffffff;
   white-space: pre-wrap;
@@ -109,8 +112,7 @@ body {
 }
 
 .textoutput:hover{
-    border: 8px solid #fb07f7;
-    border-radius: 15px;
+    border: 4px solid #1500d1;
 }
 
 @media (max-width: 800px){
